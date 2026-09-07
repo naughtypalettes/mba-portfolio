@@ -122,3 +122,67 @@ textarea { resize: vertical; min-height: 34px; }
  .button-dark { font-size: 23px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .button { transition: none; } }
+
+/* Work-first editorial layout */
+figure { margin: 0; }
+figcaption { margin-top: 16px; color: #bdbdb6; font-size: 14px; line-height: 1.6; }
+h3, h4 { margin: 0; }
+.hero-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 64px; align-items: center; padding-block: 36px 20px; }
+.hero-copy { display: grid; gap: 28px; }
+.hero-copy .eyebrow { font-size: 12px; letter-spacing: .08em; }
+.hero-copy h1 { font-size: clamp(42px, 4.8vw, 68px); line-height: 1.06; }
+.hero-copy .intro-copy { font-size: 20px; line-height: 1.65; color: #c6c6c0; }
+.hero-copy .actions { font-size: 16px; gap: 20px; flex-wrap: wrap; }
+.hero-work img { width: 100%; display: block; border-radius: 20px; }
+.hero-work figcaption { font-size: 12px; letter-spacing: .04em; }
+.credibility { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; border-block: 1px solid #454545; padding-block: 28px; margin-top: 12px; }
+.credibility .eyebrow { font-size: 12px; letter-spacing: .06em; }
+.credibility > p:last-child { font-size: 19px; line-height: 1.65; color: #c6c6c0; }
+.credibility a, .pricing-note a { text-decoration: underline; text-underline-offset: 4px; }
+.case-study { border-top: 1px solid #454545; padding-top: 32px; scroll-margin-top: 24px; }
+.case-heading { display: grid; gap: 16px; margin-bottom: 32px; }
+.case-heading .eyebrow { font-size: 12px; letter-spacing: .06em; }
+.case-heading h3 { font-family: var(--display); font-weight: 400; font-size: clamp(32px, 4vw, 52px); line-height: 1.1; }
+.case-deck { color: #c6c6c0; font-size: 23px; line-height: 1.5; }
+.case-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; align-items: start; }
+.case-story { display: grid; gap: 26px; }
+.case-story h4 { font-size: 13px; text-transform: uppercase; letter-spacing: .07em; margin-bottom: 10px; font-weight: 500; }
+.case-story p { font-size: 18px; line-height: 1.7; color: #c6c6c0; }
+.case-outcome { border-left: 2px solid var(--paper); padding-left: 22px; }
+.site-capture { width: 100%; height: auto; border: 1px solid #454545; border-radius: 12px; display: block; }
+.about-section { padding-block: 72px; background: var(--paper); color: #000; }
+.about-grid { display: grid; grid-template-columns: .8fr 1.2fr; align-items: center; gap: 64px; }
+.about-portrait { width: 100%; height: auto; border-radius: 18px; }
+.about-section .section-intro p:not(.eyebrow) { font-size: 19px; line-height: 1.7; color: #363630; }
+.about-section .eyebrow { font-size: 13px; }
+.working { padding-block: 80px; }
+.working .process { grid-template-columns: repeat(5, 1fr); gap: 24px; }
+.working .process li { font-size: 16px; }
+.working .process span { font-size: 12px; }
+.timing-note { max-width: 800px; font-size: 17px; line-height: 1.7; color: #c6c6c0; }
+.package-grid { margin-top: 36px; }
+.package-card .partner-example { font-size: 16px; }
+.contact { max-width: 880px; }
+.contact > p:not(.eyebrow) { max-width: 740px; font-size: 22px; line-height: 1.6; }
+button:disabled { cursor: not-allowed; opacity: .55; }
+footer { padding-block: 32px; display: flex; justify-content: space-between; gap: 24px; font-size: 13px; line-height: 1.6; }
+footer p { color: #bdbdb6; }
+@media (max-width: 1000px) {
+ .hero-grid, .case-grid, .about-grid { gap: 32px; }
+ .working .process { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 700px) {
+ .hero-grid, .case-grid, .about-grid, .credibility { grid-template-columns: 1fr; gap: 28px; }
+ .hero-grid { padding-block: 20px 0; }
+ .hero-copy h1 { font-size: clamp(40px, 10vw, 60px); }
+ .hero-work { max-width: 440px; }
+ .hero-copy .intro-copy { font-size: 19px; }
+ .credibility { gap: 16px; }
+ .case-deck { font-size: 21px; }
+ .case-story p { font-size: 17px; }
+ .working .process { grid-template-columns: 1fr; }
+ .about-section, .working { padding-block: 48px; }
+ .about-portrait { max-width: 360px; }
+ .contact > p:not(.eyebrow) { font-size: 19px; }
+ footer { flex-direction: column; }
+}

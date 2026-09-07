@@ -1,24 +1,54 @@
 'use strict';
 const form = document.querySelector('#inquiry-form');
+const status = document.querySelector('#form-status');
+const button = form.querySelector('button[type="submit"]');
+const endpoint = form.getAttribute('action') || '';
+const configured = /^https:\/\/formspree\.io\/f\/[a-zA-Z0-9]+$/.test(endpoint);
+let pending = false;
+button.disabled = !configured;
+if (configured) status.textContent = 'Send your brief here. I’ll review it so we can discuss fit and scope.';
 document.querySelectorAll('[data-package]').forEach((link) => {
   link.addEventListener('click', () => {
     form.elements.project.value = link.dataset.package;
   });
 });
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  if (!form.reportValidity()) return;
-  const data = new FormData(form);
-  const name = data.get('name').trim();
-  const email = data.get('email').trim();
-  const project = data.get('project').trim();
-  const brief = data.get('brief').trim();
-  if (!name || !project || !brief) {
-    document.querySelector('#form-status').textContent = 'Please fill in your name, project type and a short brief.';
+form.addEventListener('submit', async (event) => {
+  if (!configured || pending) {
+    event.preventDefault();
     return;
   }
-  const subject = `Project inquiry: ${project}`;
-  const body = `Name: ${name}\nEmail: ${email}\nProject type: ${project}\n\n${brief}`;
-  window.location.href = `mailto:hello@madebyamar.co?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  document.querySelector('#form-status').textContent = 'Your email draft is ready to open. Send it from your email app to complete your inquiry. If no app opens, email hello@madebyamar.co directly.';
+  event.preventDefault();
+  for (const name of ['name', 'email', 'project', 'brief']) {
+    form.elements[name].value = form.elements[name].value.trim();
+  }
+  if (!form.reportValidity()) return;
+  pending = true;
+  button.disabled = true;
+  button.textContent = 'Sending…';
+  form.setAttribute('aria-busy', 'true');
+  status.textContent = 'Sending your inquiry…';
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 20000);
+  try {
+    const response = await fetch(endpoint, {
+      method: 'POST', body: new FormData(form),
+      headers: { Accept: 'application/json' }, signal: controller.signal
+    });
+    if (!response.ok) {
+      status.textContent = response.status === 429
+        ? 'Too many attempts. Please wait a few minutes before trying again, or email me below.'
+        : 'Your inquiry wasn’t accepted. Check your details and try again, or email me below.';
+      return;
+    }
+    form.reset();
+    status.textContent = 'Thanks—your inquiry has been submitted. I’ll review your brief so we can discuss fit and scope.';
+  } catch {
+    status.textContent = 'I couldn’t confirm your submission. Your details are still here. Please try again, or email me below.';
+  } finally {
+    clearTimeout(timeout);
+    pending = false;
+    button.disabled = false;
+    button.textContent = 'Send inquiry ↗';
+    form.removeAttribute('aria-busy');
+  }
 });
