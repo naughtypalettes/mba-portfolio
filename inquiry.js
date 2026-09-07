@@ -1,5 +1,10 @@
 'use strict';
 const form = document.querySelector('#inquiry-form');
+document.querySelectorAll('[data-package]').forEach((link) => {
+  link.addEventListener('click', () => {
+    form.elements.project.value = link.dataset.package;
+  });
+});
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   if (!form.reportValidity()) return;
