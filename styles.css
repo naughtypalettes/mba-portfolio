@@ -12,6 +12,10 @@ nav { display: flex; align-items: center; justify-content: space-between; min-he
 h1, h2, .role { font-family: var(--display); font-weight: 400; font-variation-settings: 'XROT' 0, 'YROT' 0; }
 h1 { font-size: 150px; line-height: normal; }
 .role { font-size: 30px; }
+.header-portrait { position: relative; isolation: isolate; width: 100%; aspect-ratio: 1126 / 732; margin-top: 100px; text-align: center; }
+.header-portrait .portrait { position: absolute; z-index: -1; width: 56.84%; height: auto; aspect-ratio: 1; object-fit: cover; left: 21.58%; top: 12.98%; }
+.header-portrait h1 { font-size: clamp(56px, 15.3vw, 223px); line-height: 1.26; white-space: nowrap; }
+.header-portrait .role { font-size: clamp(14px, 2.56vw, 37.3px); line-height: 1.26; }
 .intro-copy { max-width: 840px; font-size: 28px; line-height: normal; }
 .actions { display: flex; align-items: center; gap: 28px; font-size: 24px; }
 .button { display: inline-block; width: fit-content; border: 0; border-radius: 4px; padding: 16px 24px; font: inherit; cursor: pointer; transition: background-color .15s; }
@@ -95,6 +99,9 @@ textarea { resize: vertical; min-height: 34px; }
  nav > a:first-child { flex-basis: 100%; }
  .container { width: calc(100% - 40px); }
  .introduction { padding-top: 24px; padding-bottom: 48px; gap: 24px; }
+ .header-portrait { margin-top: 40px; min-height: 250px; }
+ .header-portrait h1 { font-size: clamp(40px, 15vw, 105px); }
+ .header-portrait .role { font-size: clamp(12px, 2.65vw, 19px); }
  nav { font-size: 14px; gap: 16px; min-height: 40px; }
  h1 { font-size: clamp(56px, 14vw, 96px); }
  .role { font-size: 24px; }
