@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(inter-regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(inter-medium.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Tilt Warp';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(tilt-warp.ttf) format('truetype');
+}
+
