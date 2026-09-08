@@ -24,9 +24,3 @@ Install Playwright in a development environment and use an installed Chrome brow
 Checks cover 390/768/1440px widths, links, imagery, package prefill, invalid and whitespace-only inputs, service rejection, rate limiting, network failure, success, duplicate prevention and native POST without JavaScript. The test also captures the current hero to assets/made-by-amar-site.png for the self-study. Review that generated image when changing the hero. Full-page previews are written to .preview/.
 
 Publishing is separate from local implementation. Activate and verify Formspree before releasing the direct-submit form.
-
-## Nostalgia redesign / saved version
-
-The complete pre-redesign site is in backups/pre-nostalgia-2026-09-07/, including the exact HTML, CSS, scripts and assets present before this redesign. To revert, copy its index.html, styles.css, inquiry.js and assets folder back into the project root, replacing the corresponding files. The backup itself should remain intact.
-
-The new editorial treatment uses the existing portrait, locally hosted fonts, CSS light leaks, outlined typography and an SVG grain overlay. No external image or font service is required.
