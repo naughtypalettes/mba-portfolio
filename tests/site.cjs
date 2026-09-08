@@ -27,7 +27,7 @@ const server = http.createServer((req,res) => {
   const brokenAnchors = await page.locator('a[href^="#"]').evaluateAll(links => links.filter(a => !document.querySelector(a.getAttribute('href'))).map(a => a.outerHTML));
   assert.deepEqual(brokenAnchors, []);
   fs.mkdirSync(path.join(root, '.preview'), {recursive:true});
-  for (const width of [320,390,600,768,820,1024,1100,1440]) {
+  for (const width of [320,390,600,768,820,834,1024,1100,1440]) {
    await page.setViewportSize({width,height:1000});
    assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `overflow at ${width}`);
    if (width <= 1100) {
