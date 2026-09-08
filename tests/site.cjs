@@ -27,9 +27,19 @@ const server = http.createServer((req,res) => {
   const brokenAnchors = await page.locator('a[href^="#"]').evaluateAll(links => links.filter(a => !document.querySelector(a.getAttribute('href'))).map(a => a.outerHTML));
   assert.deepEqual(brokenAnchors, []);
   fs.mkdirSync(path.join(root, '.preview'), {recursive:true});
-  for (const width of [390,768,1440]) {
+  for (const width of [320,390,600,768,820,1024,1100,1440]) {
    await page.setViewportSize({width,height:1000});
    assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `overflow at ${width}`);
+   if (width <= 1100) {
+    const hero = await page.locator('.hero-collage').evaluate(el => {
+     const heading = el.querySelector('.hero-copy').getBoundingClientRect();
+     const bottom = el.querySelector('.hero-bottom').getBoundingClientRect();
+     return {headingBottom:heading.bottom, copyTop:bottom.top, bottom:bottom.bottom, edge:el.getBoundingClientRect().bottom};
+    });
+    assert(hero.headingBottom <= hero.copyTop && hero.bottom <= hero.edge, `hero copy overlaps at ${width}`);
+    assert(await page.locator('nav a').evaluateAll(links => links.every(a => a.getBoundingClientRect().height >= 44)), `small navigation targets at ${width}`);
+    assert.equal(await page.locator('.case-grid').first().evaluate(el => getComputedStyle(el).gridTemplateColumns.split(' ').length),1);
+   }
    await page.screenshot({path:path.join(root, `.preview/home-${width}.png`),fullPage:true});
    if(width===390) await page.screenshot({path:path.join(root,'.preview/mobile-top.png')});
   }
