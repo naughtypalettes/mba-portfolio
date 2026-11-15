@@ -1,145 +1,157 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0TSCBR8PMH"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-0TSCBR8PMH');
-  </script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Made by Amar — Strategy, Identity &amp; Campaigns</title>
-  <meta name="description" content="I help creatives, nonprofits and ambitious brands turn big ideas into clear identities, purposeful content and connected campaigns.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Made by Amar — Creative Portfolio</title>
+  <meta name="description" content="Portfolio of Amar Elkaz — digital marketing strategist and creative.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Outfit:wght@500;600;900&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="collage.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
-    <nav class="site-nav" aria-label="Primary navigation">
-      <a class="wordmark" href="#top">Made by Amar</a>
-      <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="https://www.linkedin.com/in/amar-elkaz" target="_blank" rel="noopener noreferrer">About me ↗</a>
-        <a href="#approach">Approach</a>
-        <a href="#contact">Contact</a>
-      </div>
+    <nav class="nav">
+      <a href="#" class="logo">Made by Amar</a>
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main id="top">
+  <main>
     <section class="hero">
-      <img class="hero-portrait" src="amar-portrait.jpg" alt="Portrait of Amar Elkaz in side profile" width="1536" height="1536">
-      <div class="hero-shade" aria-hidden="true"></div>
-      <div class="hero-ring" aria-hidden="true"></div>
-      <div class="hero-copy">
-        <h1>Amar Elkaz</h1>
-        <p class="hero-role">Digital Marketing Strategist + Creative</p>
-        <p class="hero-intro">I help creatives, nonprofits and ambitious brands turn big ideas into clear identities, purposeful content and connected campaigns.</p>
-        <div class="hero-actions">
-          <a class="button button-light" href="#contact">Start a project ↗</a>
-          <a class="text-link" href="#services">Explore services ↓</a>
+      <div class="hero-content">
+        <h1>Strategy & Creative</h1>
+        <p class="hero-subtitle">Digital marketing and creative work for brands, nonprofits, and ambitious ideas.</p>
+        <div class="hero-cta">
+          <a href="#work" class="btn btn-primary">View Work</a>
+          <a href="#contact" class="btn btn-secondary">Get in Touch</a>
         </div>
       </div>
     </section>
 
-    <section class="services-intro" id="services">
-      <p class="eyebrow">Services / Built around outcomes</p>
-      <h2>Choose what your idea<br>needs next.</h2>
-      <p class="section-deck">From defining the foundation to bringing a full campaign into the world, each package connects strategic thinking with the creative work required to move.</p>
-    </section>
+    <section class="gallery" id="work">
+      <div class="section-header">
+        <span class="section-label">Selected Work</span>
+        <h2>Recent Projects</h2>
+      </div>
 
-    <section class="service-list" aria-label="Service packages">
-      <article class="service-row">
-        <div class="service-art art-foundation"><span>01 / Foundation</span><h3>Brand<br>Foundation</h3></div>
-        <div class="service-copy">
-          <h3>Turn the idea into a credible brand.</h3>
-          <p class="price">$1,500–$2,500 CAD</p>
-          <p class="service-summary">For new organizations, campaigns and founders who need clarity, cohesion and a visual system they can use with confidence.</p>
-          <div class="includes"><ul><li>Brand discovery session</li><li>Positioning + messaging</li><li>Logo / identity system</li></ul><ul><li>Colour + typography</li><li>Mini brand guide</li><li>Social / profile assets</li></ul></div>
+      <div class="gallery-grid">
+        <!-- Homegrown Creative Accelerator -->
+        <div class="gallery-item wide">
+          <div class="gallery-image">
+            <img src="HG-CA-Feed-01.png" alt="Homegrown Creative Accelerator - Feed 01">
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-tag">Campaign</span>
+            <h3>Homegrown Creative Accelerator</h3>
+            <p>Social campaign visuals for emerging storytellers.</p>
+          </div>
         </div>
-      </article>
 
-      <article class="service-row service-row-reverse">
-        <div class="service-copy">
-          <h3>Make the campaign easier to notice and act on.</h3>
-          <p class="price">$2,000–$3,500 CAD</p>
-          <p class="service-summary">For organizations with an established brand and an important story, program or offer that needs a focused launch.</p>
-          <div class="includes"><ul><li>Campaign strategy</li><li>Core concept + messaging</li><li>Key campaign visual</li></ul><ul><li>6–10 social assets</li><li>Copy + captions</li><li>Launch content plan</li></ul></div>
+        <div class="gallery-item">
+          <div class="gallery-image">
+            <img src="HG-CA-Feed-02.png" alt="Homegrown Creative Accelerator - Feed 02">
+          </div>
         </div>
-        <div class="service-art art-campaign"><span>02 / Momentum</span><h3>Campaign<br>Launch</h3></div>
-      </article>
 
-      <article class="service-row">
-        <div class="service-art art-brand-launch"><span>03 / Complete launch</span><h3>Brand +<br>Launch</h3></div>
-        <div class="service-copy">
-          <h3>Go from unclear to ready for the world.</h3>
-          <div class="price-line"><p class="price">$3,500–$5,500 CAD</p><span class="popular">Most popular</span></div>
-          <p class="service-summary">The flagship engagement: strategy, identity and launch execution shaped as one coherent system.</p>
-          <div class="includes"><ul><li>Brand Foundation included</li><li>Campaign strategy</li><li>Creative direction</li></ul><ul><li>8–12 launch assets</li><li>Landing-page design</li><li>Implementation support</li></ul></div>
+        <div class="gallery-item">
+          <div class="gallery-image">
+            <img src="HG-CA-Feed-03.png" alt="Homegrown Creative Accelerator - Feed 03">
+          </div>
         </div>
-      </article>
 
-      <article class="service-row service-row-reverse">
-        <div class="service-copy">
-          <h3>Add strategic + creative capacity to your team.</h3>
-          <p class="price">From $2,000/month</p>
-          <p class="service-summary">Ongoing support for organizations that need momentum and experienced creative thinking without another full-time hire.</p>
-          <div class="includes"><ul><li>Monthly strategy session</li><li>Campaign planning</li><li>Design support</li></ul><ul><li>Social creative</li><li>Marketing consultation</li><li>Performance review</li></ul></div>
+        <div class="gallery-item">
+          <div class="gallery-image">
+            <img src="HG-CA-Feed-04.png" alt="Homegrown Creative Accelerator - Feed 04">
+          </div>
         </div>
-        <div class="service-art art-partner"><span>04 / Ongoing</span><h3>Creative<br>Partner</h3></div>
-      </article>
-    </section>
 
-    <section class="approach" id="approach">
-      <p class="eyebrow">Strategy + Creative, together</p>
-      <h2>No such thing as<br>a small idea.</h2>
-      <p>From clarifying your message to shaping a visual identity and bringing a campaign to life, I connect the thinking with the making.</p>
-    </section>
+        <!-- Short Film Showcase -->
+        <div class="gallery-item wide">
+          <div class="gallery-image">
+            <img src="SSF2026-Feed-Selections.png" alt="Short Film Showcase 2026">
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-tag">Event</span>
+            <h3>Short Film Showcase 2026</h3>
+            <p>Promotional materials for annual showcase.</p>
+          </div>
+        </div>
 
-    <section class="addons">
-      <div class="section-heading"><p class="eyebrow">Build on your package</p><h2>Add what the project needs.<br>Skip what it doesn’t.</h2></div>
-      <div class="addon-list">
-        <div><span>Landing page</span><strong>+$1,000–$2,000</strong></div>
-        <div><span>Additional campaign assets</span><strong>+$100–$250 each</strong></div>
-        <div><span>Presentation / deck</span><strong>+$750–$1,500</strong></div>
-        <div><span>Video / reel creative</span><strong>+$500–$1,500</strong></div>
-        <div><span>Additional brand collateral</span><strong>+$250–$750</strong></div>
-        <div><span>Expedited delivery</span><strong>+25–40%</strong></div>
+        <div class="gallery-item">
+          <div class="gallery-image">
+            <img src="SSF2026-Feed-Selections-2.png" alt="Short Film Showcase 2026 - Selections">
+          </div>
+        </div>
+
+        <!-- Instagram Posts -->
+        <div class="gallery-item wide">
+          <div class="gallery-image">
+            <img src="Instagram post - 1.png" alt="Instagram Post 1">
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-tag">Social</span>
+            <h3>Brand Content</h3>
+            <p>Carousel and feed content for brand storytelling.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-image">
+            <img src="Instagram post - 2.png" alt="Instagram Post 2">
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-image">
+            <img src="Instagram post - 3.png" alt="Instagram Post 3">
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-image">
+            <img src="Instagram post - 4.png" alt="Instagram Post 4">
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="instagram" id="instagram">
-      <div class="instagram-heading">
-        <div><p class="eyebrow">From Instagram</p><h2>Ideas, process<br>and creative work.</h2></div>
-        <a href="https://www.instagram.com/madebyamar.co/" target="_blank" rel="noopener noreferrer">Follow @madebyamar.co ↗</a>
+    <section class="about" id="about">
+      <div class="about-content">
+        <div class="about-text">
+          <span class="section-label">About</span>
+          <h2>I help ideas find their audience.</h2>
+          <p>I'm Amar Elkaz, a digital marketing strategist and creative based in Alberta. I work with creatives, nonprofits, and brands to turn big ideas into clear identities, purposeful content, and connected campaigns.</p>
+          <p>From brand foundation to campaign launch, I connect strategic thinking with creative execution.</p>
+          <a href="https://www.linkedin.com/in/amar-elkaz" target="_blank" rel="noopener" class="btn btn-secondary">Connect on LinkedIn</a>
+        </div>
       </div>
-      <div class="featured-posts">
-        <a class="post-card post-one" href="https://www.instagram.com/p/DcRW8Hunenr/" target="_blank" rel="noopener noreferrer"><span>Brand / Process</span><strong>No small<br>ideas</strong></a>
-        <a class="post-card post-two" href="https://www.instagram.com/p/DcBYAUnjwEd/" target="_blank" rel="noopener noreferrer"><span>Ecosystem / Culture</span><strong>Alberta’s<br>creative future</strong></a>
-        <a class="post-card post-three" href="https://www.instagram.com/p/Db8Sr35FMIx/" target="_blank" rel="noopener noreferrer"><span>AI / Creative work</span><strong>Human<br>judgment</strong></a>
-      </div>
-      <nav class="more-posts" aria-label="More Instagram posts">
-        <span>More from the feed</span>
-        <a href="https://www.instagram.com/p/Dax3wL1kY5H/" target="_blank" rel="noopener noreferrer">01 ↗</a><a href="https://www.instagram.com/p/DZb40VflRMM/" target="_blank" rel="noopener noreferrer">02 ↗</a><a href="https://www.instagram.com/p/DZDxuwJkv8Y/" target="_blank" rel="noopener noreferrer">03 ↗</a><a href="https://www.instagram.com/p/DY6W9yilkk4/" target="_blank" rel="noopener noreferrer">04 ↗</a><a href="https://www.instagram.com/p/DcWNqL7m1_T/" target="_blank" rel="noopener noreferrer">05 ↗</a>
-      </nav>
     </section>
 
     <section class="contact" id="contact">
-      <div><h2>Let’s start with<br>your idea.</h2><p>Tell me what you’re working on, where it feels stuck and what success would look like. We can work through the details together.</p></div>
-      <a class="button button-dark" href="mailto:hello@madebyamar.co?subject=Made%20by%20Amar%20project%20inquiry">Send an inquiry ↗</a>
+      <div class="contact-content">
+        <span class="section-label">Contact</span>
+        <h2>Let's work together</h2>
+        <p>Have a project in mind? I'd love to hear about it.</p>
+        <a href="mailto:hello@madebyamar.co" class="btn btn-primary">hello@madebyamar.co</a>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <strong>Made by Amar</strong><span>Strategy, identity and campaigns for ambitious ideas.</span>
-    <div class="footer-links"><a href="https://www.instagram.com/madebyamar.co/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.linkedin.com/in/amar-elkaz" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
-    <span>© 2026</span>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>Made by Amar</p>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/madebyamar.co/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/in/amar-elkaz" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <p class="copyright">2026</p>
+    </div>
   </footer>
 </body>
 </html>
