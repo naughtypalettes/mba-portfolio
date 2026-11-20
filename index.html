@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0TSCBR8PMH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0TSCBR8PMH');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Made by Amar — Creative Portfolio</title>
   <meta name="description" content="Portfolio of Amar Elkaz — digital marketing strategist and creative.">
+  <meta property="og:title" content="Made by Amar — Creative Portfolio">
+  <meta property="og:description" content="Digital marketing and creative work for brands, nonprofits, and ambitious ideas.">
+  <meta property="og:image" content="https://madebyamar.co/images/showcase-01.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,7 +24,7 @@
 <body>
   <header class="site-header">
     <nav class="nav">
-      <a href="#" class="logo">Made by Amar</a>
+      <a href="#top" class="logo">Made by Amar</a>
       <ul class="nav-links">
         <li><a href="#work">Work</a></li>
         <li><a href="#about">About</a></li>
@@ -22,136 +33,118 @@
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Strategy & Creative</h1>
-        <p class="hero-subtitle">Digital marketing and creative work for brands, nonprofits, and ambitious ideas.</p>
-        <div class="hero-cta">
-          <a href="#work" class="btn btn-primary">View Work</a>
-          <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-        </div>
-      </div>
+  <main id="top">
+    <section class="intro">
+      <span class="section-label">Strategy &amp; Creative</span>
+      <h1>Visual work for brands, nonprofits, and ambitious ideas.</h1>
+      <p>Selected campaign, event, and social content by Amar Elkaz.</p>
     </section>
 
-    <section class="gallery" id="work">
-      <div class="section-header">
-        <span class="section-label">Selected Work</span>
-        <h2>Recent Projects</h2>
+    <section class="gallery" id="work" aria-label="Selected work">
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button class="filter is-active" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="homegrown" aria-pressed="false">Nomadic Social Work Program</button>
+        <button class="filter" data-filter="showcase" aria-pressed="false">Short Film Showcase</button>
+        <button class="filter" data-filter="brand" aria-pressed="false">Experimental</button>
       </div>
 
-      <div class="gallery-grid">
-        <!-- Nomadic Social Work Program -->
-        <div class="gallery-item wide">
-          <div class="gallery-image">
-            <img src="HG-CA-Feed-01.png" alt="Nomadic Social Work Program - Feed 01">
-          </div>
-          <div class="gallery-info">
-            <span class="gallery-tag">Campaign</span>
-            <h3>Nomadic Social Work Program</h3>
-            <p>Social campaign visuals for a mobile social work program serving communities on the move.</p>
-          </div>
-        </div>
-
-        <div class="gallery-item">
-          <div class="gallery-image">
-            <img src="HG-CA-Feed-02.png" alt="Nomadic Social Work Program - Feed 02">
-          </div>
-        </div>
-
-        <div class="gallery-item">
-          <div class="gallery-image">
-            <img src="HG-CA-Feed-03.png" alt="Nomadic Social Work Program - Feed 03">
-          </div>
-        </div>
-
-        <div class="gallery-item">
-          <div class="gallery-image">
-            <img src="HG-CA-Feed-04.png" alt="Nomadic Social Work Program - Feed 04">
-          </div>
-        </div>
-
-        <!-- Short Film Showcase -->
-        <div class="gallery-item wide">
-          <div class="gallery-image">
-            <img src="SSF2026-Feed-Selections.png" alt="Short Film Showcase 2026">
-          </div>
-          <div class="gallery-info">
-            <span class="gallery-tag">Event</span>
-            <h3>Short Film Showcase 2026</h3>
-            <p>Promotional materials for annual showcase.</p>
-          </div>
-        </div>
-
-        <div class="gallery-item">
-          <div class="gallery-image">
-            <img src="SSF2026-Feed-Selections-2.png" alt="Short Film Showcase 2026 - Selections">
-          </div>
-        </div>
-
-        <!-- Instagram Posts -->
-        <div class="gallery-item wide">
-          <div class="gallery-image">
-            <img src="Instagram post - 1.png" alt="Instagram Post 1">
-          </div>
-          <div class="gallery-info">
-            <span class="gallery-tag">Experimental</span>
-            <h3>Experimental</h3>
-            <p>Experimental carousel and feed content exploring new visual directions.</p>
-          </div>
-        </div>
-
-        <div class="gallery-item">
-          <div class="gallery-image">
-            <img src="Instagram post - 2.png" alt="Instagram Post 2">
-          </div>
-        </div>
-
-        <div class="gallery-item">
-          <div class="gallery-image">
-            <img src="Instagram post - 3.png" alt="Instagram Post 3">
-          </div>
-        </div>
-
-        <div class="gallery-item">
-          <div class="gallery-image">
-            <img src="Instagram post - 4.png" alt="Instagram Post 4">
-          </div>
-        </div>
-      </div>
+      <ul class="gallery-grid">
+        <li class="tile" data-project="homegrown">
+          <button class="tile-btn" data-full="images/homegrown-01.webp" data-caption="Nomadic Social Work Program — Social campaign visuals for a mobile social work program serving communities on the move.">
+            <img src="images/homegrown-01-thumb.webp" width="600" height="750" loading="lazy" alt="Homegrown campaign post: The arts sector has a mental health problem.">
+            <span class="tile-meta"><span class="tile-tag">Campaign</span>Nomadic Social Work Program</span>
+          </button>
+        </li>
+        <li class="tile" data-project="homegrown">
+          <button class="tile-btn" data-full="images/homegrown-02.webp" data-caption="Nomadic Social Work Program — Social campaign visuals for a mobile social work program serving communities on the move.">
+            <img src="images/homegrown-02-thumb.webp" width="600" height="750" loading="lazy" alt="Homegrown campaign post: Burnout looks different here.">
+            <span class="tile-meta"><span class="tile-tag">Campaign</span>Nomadic Social Work Program</span>
+          </button>
+        </li>
+        <li class="tile" data-project="homegrown">
+          <button class="tile-btn" data-full="images/homegrown-03.webp" data-caption="Nomadic Social Work Program — Social campaign visuals for a mobile social work program serving communities on the move.">
+            <img src="images/homegrown-03-thumb.webp" width="600" height="750" loading="lazy" alt="Homegrown campaign post: So we're building something that does.">
+            <span class="tile-meta"><span class="tile-tag">Campaign</span>Nomadic Social Work Program</span>
+          </button>
+        </li>
+        <li class="tile" data-project="homegrown">
+          <button class="tile-btn" data-full="images/homegrown-04.webp" data-caption="Nomadic Social Work Program — Social campaign visuals for a mobile social work program serving communities on the move.">
+            <img src="images/homegrown-04-thumb.webp" width="600" height="750" loading="lazy" alt="Homegrown campaign post: Help us build support that fits.">
+            <span class="tile-meta"><span class="tile-tag">Campaign</span>Nomadic Social Work Program</span>
+          </button>
+        </li>
+        <li class="tile" data-project="showcase">
+          <button class="tile-btn" data-full="images/showcase-01.webp" data-caption="Short Film Showcase 2026 — Promotional materials for the annual showcase.">
+            <img src="images/showcase-01-thumb.webp" width="600" height="776" loading="lazy" alt="3rd Annual Homegrown Short Film Showcase poster with a vintage TV listing 2026 selections">
+            <span class="tile-meta"><span class="tile-tag">Event</span>Short Film Showcase 2026</span>
+          </button>
+        </li>
+        <li class="tile" data-project="showcase">
+          <button class="tile-btn" data-full="images/showcase-02.webp" data-caption="Short Film Showcase 2026 — Promotional materials for the annual showcase.">
+            <img src="images/showcase-02-thumb.webp" width="600" height="777" loading="lazy" alt="Short Film Showcase 2026 selections poster with sponsors and hosts">
+            <span class="tile-meta"><span class="tile-tag">Event</span>Short Film Showcase 2026</span>
+          </button>
+        </li>
+        <li class="tile" data-project="brand">
+          <button class="tile-btn" data-full="images/brand-01.webp" data-caption="Experimental — Experimental carousel and feed content exploring new visual directions.">
+            <img src="images/brand-01-thumb.webp" width="600" height="750" loading="lazy" alt="Fatal Error poster: two figures in a glitched, monochrome sci-fi scene">
+            <span class="tile-meta"><span class="tile-tag">Experimental</span>Experimental</span>
+          </button>
+        </li>
+        <li class="tile" data-project="brand">
+          <button class="tile-btn" data-full="images/brand-02.webp" data-caption="Experimental — Experimental carousel and feed content exploring new visual directions.">
+            <img src="images/brand-02-thumb.webp" width="600" height="750" loading="lazy" alt="Inhuman poster: collage of glitch shapes and stars">
+            <span class="tile-meta"><span class="tile-tag">Experimental</span>Experimental</span>
+          </button>
+        </li>
+        <li class="tile" data-project="brand">
+          <button class="tile-btn" data-full="images/brand-03.webp" data-caption="Experimental — Experimental carousel and feed content exploring new visual directions.">
+            <img src="images/brand-03-thumb.webp" width="600" height="750" loading="lazy" alt="Perspective poster: glitch-art cityscape">
+            <span class="tile-meta"><span class="tile-tag">Experimental</span>Experimental</span>
+          </button>
+        </li>
+        <li class="tile" data-project="brand">
+          <button class="tile-btn" data-full="images/brand-04.webp" data-caption="Experimental — Experimental carousel and feed content exploring new visual directions.">
+            <img src="images/brand-04-thumb.webp" width="600" height="750" loading="lazy" alt="Error 404 poster: green glitch-art collage">
+            <span class="tile-meta"><span class="tile-tag">Experimental</span>Experimental</span>
+          </button>
+        </li>
+      </ul>
     </section>
 
     <section class="about" id="about">
-      <div class="about-content">
-        <div class="about-text">
-          <span class="section-label">About</span>
-          <h2>I help ideas find their audience.</h2>
-          <p>I'm Amar Elkaz, a digital marketing strategist and creative based in Alberta. I work with creatives, nonprofits, and brands to turn big ideas into clear identities, purposeful content, and connected campaigns.</p>
-          <p>From brand foundation to campaign launch, I connect strategic thinking with creative execution.</p>
-          <a href="https://www.linkedin.com/in/amar-elkaz" target="_blank" rel="noopener" class="btn btn-secondary">Connect on LinkedIn</a>
-        </div>
-      </div>
+      <span class="section-label">About</span>
+      <h2>I help ideas find their audience.</h2>
+      <p>I'm Amar Elkaz, a digital marketing strategist and creative based in Alberta. I work with creatives, nonprofits, and brands to turn big ideas into clear identities, purposeful content, and connected campaigns.</p>
+      <p>From brand foundation to campaign launch, I connect strategic thinking with creative execution.</p>
     </section>
 
     <section class="contact" id="contact">
-      <div class="contact-content">
-        <span class="section-label">Contact</span>
-        <h2>Let's work together</h2>
-        <p>Have a project in mind? I'd love to hear about it.</p>
-        <a href="mailto:hello@madebyamar.co" class="btn btn-primary">hello@madebyamar.co</a>
-      </div>
+      <span class="section-label">Contact</span>
+      <h2>Let's work together</h2>
+      <p>Have a project in mind? I'd love to hear about it.</p>
+      <a href="mailto:hello@madebyamar.co" class="btn">hello@madebyamar.co</a>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-content">
-      <p>Made by Amar</p>
-      <div class="footer-links">
-        <a href="https://www.instagram.com/madebyamar.co/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.linkedin.com/in/amar-elkaz" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-      <p class="copyright">2026</p>
+    <p>© 2026 Made by Amar</p>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/madebyamar.co/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.linkedin.com/in/amar-elkaz" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </footer>
+
+  <dialog class="lightbox" aria-label="Image viewer">
+    <button class="lb-close" aria-label="Close">×</button>
+    <button class="lb-nav lb-prev" aria-label="Previous image">‹</button>
+    <figure>
+      <img alt="">
+      <figcaption></figcaption>
+    </figure>
+    <button class="lb-nav lb-next" aria-label="Next image">›</button>
+  </dialog>
+
+  <script src="script.js"></script>
 </body>
 </html>
